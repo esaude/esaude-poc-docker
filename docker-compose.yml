@@ -1,0 +1,16 @@
+esaude-platform-tomcat:
+  build: esaude-platform-docker/tomcat
+  ports:
+    - "8080:8080"
+  links:
+    - esaude-platform-mysql
+esaude-platform-mysql:
+  build: esaude-platform-docker/mysql
+  ports:
+    - "3306:3306"
+esaude-poc:
+  build: .
+  ports:
+    - "80:80"
+  links:
+    - esaude-platform-tomcat

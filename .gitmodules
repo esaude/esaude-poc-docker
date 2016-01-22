@@ -1,0 +1,3 @@
+[submodule "esaude-platform-docker"]
+	path = esaude-platform-docker
+	url = https://github.com/esaude/esaude-platform-docker.git
