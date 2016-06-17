@@ -1,16 +1,14 @@
-esaude-platform-tomcat:
-  image: esaude-docker-platform-docker.bintray.io/tomcat:1.2.0
-  ports:
-    - "8080:8080"
-  links:
-    - esaude-platform-mysql
-esaude-platform-mysql:
-  image: esaude-docker-platform-docker.bintray.io/mysql:1.2.0
-  ports:
-    - "3306:3306"
-esaude-poc:
-  build: .
-  ports:
-    - "80:80"
-  links:
-    - esaude-platform-tomcat
+version: '2'
+services:
+  esaude-platform-tomcat:
+    image: esaude-docker-platform-docker.bintray.io/tomcat:1.2.1
+    ports:
+      - "8080:8080"
+  esaude-platform-mysql:
+    image: esaude-docker-platform-docker.bintray.io/mysql:1.2.1
+  esaude-poc:
+    build: .
+    ports:
+      - "80:80"
+    links:
+      - esaude-platform-tomcat

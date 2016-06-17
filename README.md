@@ -33,20 +33,11 @@ It may take a few minutes to download all the required resources.
 
 ## Access
 
-To log into eSaude EMR Plaform, use the following details:
+To log into eSaude EMR POC application, use the following details:
 
 * **Host**: `DOCKER_HOST/home`
 * **User**: admin
 * **Pass**: eSaude123
-
-## Troubleshooting
-
-Since it's not currently possible to order the startup of Docker containers, sometimes the Tomcat container will start before the MySQL container. As a result, OpenMRS might not get a database connection on start up. To work around this, stop the containers and restart them:
-
-````
-$ docker-compose stop
-$ docker-compose start
-````
 
 ## License
 

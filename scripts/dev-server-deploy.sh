@@ -14,17 +14,5 @@ docker rmi -f $(docker images -q)
 docker-compose pull
 docker-compose build
 
-# Initialize database container (give it 90 seconds)
-docker-compose up -d esaude-platform-mysql
-set +x
-for i in `seq 1 90`;
-do
-  percent=$(bc <<< "scale=4; $i/90*100")
-  printf 'Waiting for mysql to initialize: %.2f%%\r' $percent
-  sleep 1
-done
-set -x
-docker-compose stop esaude-platform-mysql
-
 # Start all containers
 docker-compose up -d
