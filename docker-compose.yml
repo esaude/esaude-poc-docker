@@ -4,11 +4,14 @@ services:
     image: esaude-docker-platform-docker.bintray.io/tomcat:1.2.6
     ports:
       - "8080:8080"
+    container_name: esaude-platform-tomcat
   esaude-platform-mysql:
     image: esaude-docker-platform-docker.bintray.io/mysql:1.2.6
+    container_name: esaude-platform-mysql
   esaude-poc:
     build: .
     ports:
       - "80:80"
     links:
       - esaude-platform-tomcat
+    container_name: esaude-emr-poc
