@@ -4,6 +4,9 @@
 
 # eSaude EMR Point of Care Docker
 
+[![Build Status](https://travis-ci.org/esaude/esaude-poc-docker.svg?branch=master)](https://travis-ci.org/esaude/esaude-poc-docker)
+[![eSaude Slack](https://slack.esaude.org/badge.svg)](https://slack.esaude.org)
+
 This repository contains the necessary infrastructure code and related resources
 required to compose and run Docker containers that start an instance
 of the [eSaude EMR Point of Care](https://github.com/esaude/poc-ui-prototype) system. Three containers are created - one each for MySQL, Tomcat and Apache Web Server.
@@ -41,4 +44,4 @@ To log into eSaude EMR POC application, use the following details:
 
 ## License
 
-[MPL 2.0 w/ HD](http://openmrs.org/license/) © [OpenMRS Inc.](http://www.openmrs.org/)
+[MPL 2.0 w/ HD](http://openmrs.org/license/)
