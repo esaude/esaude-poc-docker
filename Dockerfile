@@ -1,6 +1,6 @@
 FROM httpd:2.4-alpine
 
-ENV POC_VERSION master
+ARG POC_VERSION=master
 
 ADD httpd.conf /usr/local/apache2/conf/httpd.conf
 ADD httpd-vhosts.conf /usr/local/apache2/conf/httpd-vhosts.conf
