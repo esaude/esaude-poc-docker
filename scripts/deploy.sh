@@ -9,3 +9,7 @@ docker tag `docker images -q esaude-emr-poc` esaude-docker-poc-docker.bintray.io
 
 # Push the image
 docker push esaude-docker-poc-docker.bintray.io/poc:$POC_VERSION
+
+# Notify to slack
+SLACK_MESSAGE="New eSaude POC Docker image ($POC_VERSION) published <https://bintray.com/esaude/poc-docker/poc|here>"
+curl -X POST --data-urlencode 'payload={"username": "eSaude Bintray", "text": "'"$SLACK_MESSAGE"'", "icon_url": "https://bintray.com/assets/favicon.png"}' $SLACK_WEBHOOK_URL
