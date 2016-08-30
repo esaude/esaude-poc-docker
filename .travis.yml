@@ -1,0 +1,16 @@
+sudo: required
+services:
+  - docker
+env:
+  - POC_VERSION=master
+script:
+  - sh scripts/build.sh
+after_script:
+  - docker images
+deploy:
+  provider: script
+  script: scripts/deploy.sh
+  skip_cleanup: true
+notifications:
+  slack:
+    secure: WzXfYFy4zrzo2WCI7NWppaZ+18ASnkWuubugUyrmJDDan0qmXQULo3oBopQw/zClU3eCTvFbWi0LJnrQY6icE4v4G421YPo1PYXa9PnPd5Xt5B7vmmRmMCSc39pKtHJOEYglM201yH6J0qfc+B9eXMyBDdnuK6dzZ3qOGdMN/ZgXvQteFQDsdAi6NblE+nfZkUyCykKuGpQMugNkIfiUkz6q8ud7umohN3o9fpDCc20Y6uGAVzFGZXwqCVn0EQ3mOFXWeXQD7XjSuQCv62wx1XywtDdybfZ+DMVn5SzWzqICUIuelpqw7ah9MBsTpm0ASwOaus+yg23zHPEl30P2gKos3NbBjoItvmMt/WRK9OQkgfA3mOcZLaNpBUxNYwnxhb1VpzBfRXSpUrAJvS4o03AqmAvem5/HqDwqBiq1wtWaE0ofWLwB8khagExkPsci5BsdgPC1LMD9P6zQ1LXkkTEzz+kOViMmX4h1z7hJzykvTwhBv9acdia0T6e1vuw/O1vfAeQXXvUprF+HX8AusS1HJCPv+44zi0vr6LpHnB5jH0oKR3O5dF65SCtd6JGo4PNQRfZ9jpO4jiSxg5DMuNjX5zrJjlZdXdVCmr1h45JHFBIT8XT5fEZPmZAncMSyEGmuQKxybyI0yrMY2tSmrOkjiOSHiNCRfLSGvSVXcdQ=

@@ -4,6 +4,9 @@
 
 # eSaude EMR Point of Care Docker
 
+[![Build Status](https://travis-ci.org/esaude/esaude-poc-docker.svg?branch=master)](https://travis-ci.org/esaude/esaude-poc-docker)
+[![eSaude Slack](https://slack.esaude.org/badge.svg)](https://slack.esaude.org)
+
 This repository contains the necessary infrastructure code and related resources
 required to compose and run Docker containers that start an instance
 of the [eSaude EMR Point of Care](https://github.com/esaude/poc-ui-prototype) system. Three containers are created - one each for MySQL, Tomcat and Apache Web Server.
@@ -33,21 +36,12 @@ It may take a few minutes to download all the required resources.
 
 ## Access
 
-To log into eSaude EMR Plaform, use the following details:
+To log into eSaude EMR POC application, use the following details:
 
 * **Host**: `DOCKER_HOST/home`
 * **User**: admin
 * **Pass**: eSaude123
 
-## Troubleshooting
-
-Since it's not currently possible to order the startup of Docker containers, sometimes the Tomcat container will start before the MySQL container. As a result, OpenMRS might not get a database connection on start up. To work around this, stop the containers and restart them:
-
-````
-$ docker-compose stop
-$ docker-compose start
-````
-
 ## License
 
-[MPL 2.0 w/ HD](http://openmrs.org/license/) © [OpenMRS Inc.](http://www.openmrs.org/)
+[MPL 2.0 w/ HD](http://openmrs.org/license/)
