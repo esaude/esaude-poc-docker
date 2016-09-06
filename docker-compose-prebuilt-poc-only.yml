@@ -1,7 +1,7 @@
 version: '2'
 services:
   esaude-emr-poc:
-    image: esaude-docker-poc-docker.bintray.io/poc:1.0.0-alpha5
+    image: esaude-docker-poc-docker.bintray.io/poc:1.0.0-alpha6
     ports:
       - "80:80"
     container_name: esaude-emr-poc

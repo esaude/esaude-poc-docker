@@ -1,7 +1,7 @@
 version: '2'
 services:
   esaude-platform-tomcat:
-    image: esaude-docker-platform-docker.bintray.io/tomcat:1.2.11
+    image: esaude-docker-platform-docker.bintray.io/tomcat:1.2.12
     ports:
       - "8080:8080"
     container_name: esaude-platform-tomcat
@@ -10,14 +10,14 @@ services:
     networks:
       - network
   esaude-platform-mysql:
-    image: esaude-docker-platform-docker.bintray.io/mysql:1.2.11
+    image: esaude-docker-platform-docker.bintray.io/mysql:1.2.12
     container_name: esaude-platform-mysql
     networks:
       - network
     volumes:
       - data:/opt/esaude/data
   esaude-emr-poc:
-    image: esaude-docker-poc-docker.bintray.io/poc:1.0.0-alpha5
+    image: esaude-docker-poc-docker.bintray.io/poc:1.0.0-alpha6
     ports:
       - "80:80"
     links:
