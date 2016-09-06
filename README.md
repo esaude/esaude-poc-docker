@@ -5,6 +5,7 @@
 # eSaude EMR Point of Care Docker
 
 [![Build Status](https://travis-ci.org/esaude/esaude-poc-docker.svg?branch=master)](https://travis-ci.org/esaude/esaude-poc-docker)
+[![Download](https://api.bintray.com/packages/esaude/apps/esaude-app-poc/images/download.svg)](https://bintray.com/esaude/apps/esaude-app-poc/_latestVersion)
 [![eSaude Slack](https://slack.esaude.org/badge.svg)](https://slack.esaude.org)
 
 This repository contains the necessary infrastructure code and related resources
