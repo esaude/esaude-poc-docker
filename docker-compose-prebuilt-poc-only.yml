@@ -7,6 +7,8 @@ services:
     container_name: esaude-emr-poc
     networks:
       - network
+    hostname: esaude-emr-poc
+    restart: unless-stopped
 networks:
   network:
 volumes:
