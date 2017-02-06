@@ -12,11 +12,8 @@ git clean -f -d
 git reset --hard origin/master
 
 # Force remote all containers and images
-docker rm -v -f $(docker ps -a -q)
+docker rm -f $(docker ps -a -q)
 docker rmi -f $(docker images -q)
-
-# Remove orphaned volumes
-docker volume rm $(docker volume ls -qf dangling=true)
 
 # If the POC_VERSION variable is set, deploy a tagged release
 if [ -z "$POC_VERSION" ];
