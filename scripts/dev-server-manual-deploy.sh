@@ -39,14 +39,14 @@ cp /opt/manual-deploy/docker-compose-poc-docker.yml /opt/manual-deploy/esaude-po
 # Force remove all containers and images
 #docker rm -f $(docker ps -a -q)
 #docker rmi -f $(docker images -q)
-sudo docker rm -f esaude-emr-poc
-sudo docker rmi -f $(sudo docker images -q) 
+docker rm -f esaude-emr-poc
+docker rmi -f $(sudo docker images -q) 
 
 # If the POC_VERSION variable is set, deploy a tagged release
 if [ -z "$POC_VERSION" ];
 then
   # Fetch, build from master & run containers
-  sudo docker-compose up -d
+  docker-compose up -d
 else
   # Generate Docker Compose override file
   echo -e "version: '2'\n\
