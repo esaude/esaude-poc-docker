@@ -40,7 +40,7 @@ cp /opt/manual-deploy/docker-compose-poc-docker.yml /opt/manual-deploy/esaude-po
 #docker rm -f $(docker ps -a -q)
 #docker rmi -f $(docker images -q)
 docker rm -f esaude-emr-poc
-docker rmi -f $(sudo docker images -q) 
+docker rmi -f $(docker images -q) 
 
 # If the POC_VERSION variable is set, deploy a tagged release
 if [ -z "$POC_VERSION" ];
