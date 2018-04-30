@@ -12,8 +12,8 @@ git clean -f -d
 git reset --hard origin/master
 
 # Force remote all containers and images
-#docker rm -f $(docker ps -a -q)
-#docker rmi -f $(docker images -q)
+docker rm -f $(docker ps -a -q)
+docker rmi -f $(docker images -q)
 
 # If the POC_VERSION variable is set, deploy a tagged release
 if [ -z "$POC_VERSION" ];
